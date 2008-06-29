@@ -1,0 +1,921 @@
+  [4;36;1mSQL (0.028439)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2008-06-29 11:56:51) [GET]
+  Session ID: 95919d96365065e36b45f84e55022a17
+  Parameters: {"action"=>"index", "controller"=>"front"}
+Rendering front/index
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/core.dryml in 0.02s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.01s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.03s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.28s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.19s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.08s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.05s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.03s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.14s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid.dryml in 1.00s
+  DRYML: Compiled /app/views/taglibs/themes/clean/clean.dryml in 0.01s
+  DRYML: Compiled /app/views/taglibs/application.dryml in 1.02s
+  DRYML: Compiled app/views/front/index.dryml in 1.06s
+Completed in 1.09308 (0 reqs/sec) | Rendering: 1.09077 (99%) | DB: 0.02844 (2%) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.000280)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#signup (for 127.0.0.1 at 2008-06-29 12:14:25) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOThlNjMwZmI3YmEyNDM4ZTVkNmI0YTJkY2NjNGE5%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--594558caf66449845ea3dbc5eebc92244607dfc5
+  Parameters: {"action"=>"signup", "controller"=>"users"}
+
+
+ActiveRecord::StatementInvalid (Could not find table 'users'):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/sqlite3_adapter.rb:29:in `table_structure'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/core_ext/object/misc.rb:28:in `returning'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/sqlite3_adapter.rb:28:in `table_structure'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/sqlite_adapter.rb:189:in `columns'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:1080:in `columns'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:2363:in `attributes_from_column_definition_without_lock'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/locking/optimistic.rb:55:in `attributes_from_column_definition'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:1922:in `initialize'
+    /vendor/plugins/hobo/lib/hobo/user_controller.rb:72:in `new'
+    /vendor/plugins/hobo/lib/hobo/user_controller.rb:72:in `hobo_signup'
+    /vendor/plugins/hobo/lib/hobo/user_controller.rb:22:in `signup'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+  [4;36;1mSQL (0.000851)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000254)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.002484)[0m   [0;1mCREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.002038)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000367)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000330)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000499)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#signup (for 127.0.0.1 at 2008-06-29 12:14:51) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOThlNjMwZmI3YmEyNDM4ZTVkNmI0YTJkY2NjNGE5%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--594558caf66449845ea3dbc5eebc92244607dfc5
+  Parameters: {"action"=>"signup", "controller"=>"users"}
+
+
+ActiveRecord::StatementInvalid (Could not find table 'users'):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/sqlite3_adapter.rb:29:in `table_structure'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/core_ext/object/misc.rb:28:in `returning'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/sqlite3_adapter.rb:28:in `table_structure'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/sqlite_adapter.rb:189:in `columns'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:1080:in `columns'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:2363:in `attributes_from_column_definition_without_lock'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/locking/optimistic.rb:55:in `attributes_from_column_definition'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:1922:in `initialize'
+    /vendor/plugins/hobo/lib/hobo/user_controller.rb:72:in `new'
+    /vendor/plugins/hobo/lib/hobo/user_controller.rb:72:in `hobo_signup'
+    /vendor/plugins/hobo/lib/hobo/user_controller.rb:22:in `signup'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+  [4;36;1mSQL (0.000671)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000256)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000154)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.000733)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#signup (for 127.0.0.1 at 2008-06-29 12:20:07) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOThlNjMwZmI3YmEyNDM4ZTVkNmI0YTJkY2NjNGE5%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--594558caf66449845ea3dbc5eebc92244607dfc5
+  Parameters: {"action"=>"signup", "controller"=>"users"}
+
+
+ActiveRecord::StatementInvalid (Could not find table 'users'):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/sqlite3_adapter.rb:29:in `table_structure'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/core_ext/object/misc.rb:28:in `returning'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/sqlite3_adapter.rb:28:in `table_structure'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/sqlite_adapter.rb:189:in `columns'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:1080:in `columns'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:2363:in `attributes_from_column_definition_without_lock'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/locking/optimistic.rb:55:in `attributes_from_column_definition'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:1922:in `initialize'
+    /vendor/plugins/hobo/lib/hobo/user_controller.rb:72:in `new'
+    /vendor/plugins/hobo/lib/hobo/user_controller.rb:72:in `hobo_signup'
+    /vendor/plugins/hobo/lib/hobo/user_controller.rb:22:in `signup'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+  [4;35;1mSQL (0.000486)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#signup (for 127.0.0.1 at 2008-06-29 12:20:09) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOThlNjMwZmI3YmEyNDM4ZTVkNmI0YTJkY2NjNGE5%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--594558caf66449845ea3dbc5eebc92244607dfc5
+  Parameters: {"action"=>"signup", "controller"=>"users"}
+
+
+ActiveRecord::StatementInvalid (Could not find table 'users'):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/sqlite3_adapter.rb:29:in `table_structure'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/core_ext/object/misc.rb:28:in `returning'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/sqlite3_adapter.rb:28:in `table_structure'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/sqlite_adapter.rb:189:in `columns'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:1080:in `columns'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:2363:in `attributes_from_column_definition_without_lock'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/locking/optimistic.rb:55:in `attributes_from_column_definition'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:1922:in `initialize'
+    /vendor/plugins/hobo/lib/hobo/user_controller.rb:72:in `new'
+    /vendor/plugins/hobo/lib/hobo/user_controller.rb:72:in `hobo_signup'
+    /vendor/plugins/hobo/lib/hobo/user_controller.rb:22:in `signup'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+  [4;36;1mSQL (0.000732)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000255)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000305)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateUsers1 (1)
+  [4;35;1mSQL (0.003008)[0m   [0mCREATE TABLE users ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "crypted_password" varchar(40) DEFAULT NULL, "salt" varchar(40) DEFAULT NULL, "remember_token" varchar(255) DEFAULT NULL, "remember_token_expires_at" datetime DEFAULT NULL, "username" varchar(255) DEFAULT NULL, "administrator" boolean DEFAULT 'f', "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;36;1mSQL (0.001765)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;35;1mSQL (0.000347)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000380)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000148)[0m   [0mPRAGMA index_list(users)[0m
+  [4;36;1mSQL (0.000845)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#signup (for 127.0.0.1 at 2008-06-29 12:20:31) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOThlNjMwZmI3YmEyNDM4ZTVkNmI0YTJkY2NjNGE5%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--594558caf66449845ea3dbc5eebc92244607dfc5
+  Parameters: {"action"=>"signup", "controller"=>"users"}
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/core.dryml in 0.02s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.01s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.03s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.27s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.18s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.08s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.04s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.03s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.14s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid.dryml in 0.98s
+  DRYML: Compiled /app/views/taglibs/themes/clean/clean.dryml in 0.01s
+  DRYML: Compiled /app/views/taglibs/application.dryml in 0.99s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_user_pages.dryml in 0.05s
+  DRYML: Compiled users/[tag-page] in 1.08s
+Completed in 1.11900 (0 reqs/sec) | Rendering: 1.11144 (99%) | DB: 0.00084 (0%) | 200 OK [http://localhost/signup]
+  [4;35;1mSQL (0.000569)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#signup (for 127.0.0.1 at 2008-06-29 12:20:43) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOThlNjMwZmI3YmEyNDM4ZTVkNmI0YTJkY2NjNGE5%0AMDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--594558caf66449845ea3dbc5eebc92244607dfc5
+  Parameters: {"user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"peterpunk"}, "page_path"=>"users/signup", "action"=>"signup", "authenticity_token"=>"52ce7d9f83dbc9430cff9c8d8716043eef4181f6", "controller"=>"users"}
+  [4;36;1mUser Load (0.000225)[0m   [0;1mSELECT * FROM users WHERE (LOWER(users.username) = 'peterpunk') LIMIT 1[0m
+  [4;35;1mSQL (0.000184)[0m   [0mSELECT count(*) AS count_all FROM users [0m
+  [4;36;1mUser Create (0.000774)[0m   [0;1mINSERT INTO users ("salt", "updated_at", "crypted_password", "remember_token_expires_at", "username", "administrator", "remember_token", "created_at") VALUES('0a9fb567830a6b20a59f2a0a415c6232ab135e12', '2008-06-29 12:20:43', 'f362864d70edfe33e85cc554f7cfe6d845ae9c9e', NULL, 'peterpunk', 't', NULL, '2008-06-29 12:20:43')[0m
+Redirected to http://localhost:3000
+Completed in 0.01239 (80 reqs/sec) | DB: 0.00175 (14%) | 302 Found [http://localhost/signup]
+
+
+Processing FrontController#index (for 127.0.0.1 at 2008-06-29 12:20:44) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMY3NyZl9pZCIlOThlNjMwZmI3YmEyNDM4ZTVk%0ANmI0YTJkY2NjNGE5MDg6CXVzZXIiC3VzZXJfMSIKZmxhc2hJQzonQWN0aW9u%0AQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiG1RoYW5r%0AcyBmb3Igc2lnbmluZyB1cCEGOgpAdXNlZHsGOwlU--93648fad52537abe8e55c67d87b704d71aec765d
+  Parameters: {"action"=>"index", "controller"=>"front"}
+Rendering front/index
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/core.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.03s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.02s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid.dryml in 0.11s
+  DRYML: Compiled (from cache) /app/views/taglibs/themes/clean/clean.dryml in 0.00s
+  DRYML: Compiled (from cache) /app/views/taglibs/application.dryml in 0.11s
+  DRYML: Compiled app/views/front/index.dryml in 0.13s
+  [4;35;1mSQL (0.000618)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mUser Load (0.000469)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+Completed in 0.17185 (5 reqs/sec) | Rendering: 0.16883 (98%) | DB: 0.00109 (0%) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.000809)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.001710)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000193)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.000883)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000258)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000330)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000261)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateProduct2 (2)
+  [4;36;1mSQL (0.002948)[0m   [0;1mCREATE TABLE products ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) DEFAULT NULL, "stock" integer DEFAULT NULL, "price" decimal(8,2) DEFAULT NULL, "available" boolean DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;35;1mSQL (0.001729)[0m   [0mUPDATE schema_info SET version = 2[0m
+  [4;36;1mSQL (0.000400)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000443)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000101)[0m   [0;1mPRAGMA index_list(products)[0m
+  [4;35;1mSQL (0.000092)[0m   [0mPRAGMA index_list(users)[0m
+  [4;36;1mSQL (0.001855)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2008-06-29 12:27:35) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMY3NyZl9pZCIlOThlNjMwZmI3YmEyNDM4ZTVk%0ANmI0YTJkY2NjNGE5MDg6CXVzZXIiC3VzZXJfMSIKZmxhc2hJQzonQWN0aW9u%0AQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--d9ef57fd34305b114d684b3f1ebe2e5df20abde8
+  Parameters: {"action"=>"index", "controller"=>"front"}
+Rendering front/index
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/core.dryml in 0.08s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.01s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.03s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.27s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.14s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.10s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.05s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.11s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.05s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid.dryml in 0.90s
+  DRYML: Compiled /app/views/taglibs/themes/clean/clean.dryml in 0.01s
+  DRYML: Compiled /app/views/taglibs/application.dryml in 0.92s
+  DRYML: Compiled app/views/front/index.dryml in 1.02s
+  [4;35;1mUser Load (0.000497)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;36;1mProduct Load (0.000241)[0m   [0;1mSELECT * FROM products LIMIT 6[0m
+Completed in 1.06913 (0 reqs/sec) | Rendering: 1.06510 (99%) | DB: 0.00259 (0%) | 200 OK [http://localhost/]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-06-29 12:27:37) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOThlNjMwZmI3YmEyNDM4ZTVkNmI0YTJkY2NjNGE5%0AMDg6CXVzZXIiC3VzZXJfMSIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6%0ARmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--fccc6e8c70627175172ba7f986a2b99a12c6db64
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.000494)[0m   [0mSELECT * FROM products LIMIT 30 OFFSET 0[0m
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/core.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.03s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.13s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid.dryml in 0.22s
+  DRYML: Compiled (from cache) /app/views/taglibs/themes/clean/clean.dryml in 0.00s
+  DRYML: Compiled (from cache) /app/views/taglibs/application.dryml in 0.22s
+  DRYML: Compiled products/[tag-page] in 0.22s
+  [4;36;1mSQL (0.000522)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mUser Load (0.000505)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+Completed in 0.26884 (3 reqs/sec) | Rendering: 0.26559 (98%) | DB: 0.00049 (0%) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.000915)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000382)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000166)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.000938)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000253)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000386)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000229)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000220)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateCustomer (3)
+  [4;35;1mSQL (0.002850)[0m   [0mCREATE TABLE customers ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) DEFAULT NULL, "address" text DEFAULT NULL, "phone" varchar(255) DEFAULT NULL, "email" varchar(255) DEFAULT NULL, "source" varchar(255) DEFAULT NULL, "registered" datetime DEFAULT NULL, "active" boolean DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;36;1mSQL (0.001663)[0m   [0;1mUPDATE schema_info SET version = 3[0m
+  [4;35;1mSQL (0.000357)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000500)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000099)[0m   [0mPRAGMA index_list(customers)[0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mPRAGMA index_list(products)[0m
+  [4;35;1mSQL (0.000264)[0m   [0mPRAGMA index_list(users)[0m
+  [4;36;1mSQL (0.001183)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000449)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000200)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.001073)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000260)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000369)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000225)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000302)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000219)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateInvoice (4)
+  [4;36;1mSQL (0.002740)[0m   [0;1mCREATE TABLE invoices ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "customer_id" integer DEFAULT NULL, "note" text DEFAULT NULL, "date" datetime DEFAULT NULL, "state" varchar(255) DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;35;1mSQL (0.001760)[0m   [0mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000325)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000721)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000083)[0m   [0;1mPRAGMA index_list(customers)[0m
+  [4;35;1mSQL (0.000074)[0m   [0mPRAGMA index_list(invoices)[0m
+  [4;36;1mSQL (0.000099)[0m   [0;1mPRAGMA index_list(products)[0m
+  [4;35;1mSQL (0.000097)[0m   [0mPRAGMA index_list(users)[0m
+  [4;36;1mSQL (0.001091)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000504)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000168)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.001187)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000260)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000365)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000229)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000222)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000269)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000464)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateInvoiceItems (5)
+  [4;35;1mSQL (0.003035)[0m   [0mCREATE TABLE invoice_items ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "invoice_id" integer DEFAULT NULL, "product_id" integer DEFAULT NULL, "description" varchar(255) DEFAULT NULL, "quantity" integer DEFAULT NULL, "unit_price" integer DEFAULT NULL, "total" integer DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;36;1mSQL (0.002143)[0m   [0;1mUPDATE schema_info SET version = 5[0m
+  [4;35;1mSQL (0.000684)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000495)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000074)[0m   [0mPRAGMA index_list(customers)[0m
+  [4;36;1mSQL (0.000068)[0m   [0;1mPRAGMA index_list(invoice_items)[0m
+  [4;35;1mSQL (0.000086)[0m   [0mPRAGMA index_list(invoices)[0m
+  [4;36;1mSQL (0.000069)[0m   [0;1mPRAGMA index_list(products)[0m
+  [4;35;1mSQL (0.000086)[0m   [0mPRAGMA index_list(users)[0m
+  [4;36;1mSQL (0.001343)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-06-29 12:33:33) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOThlNjMwZmI3YmEyNDM4ZTVkNmI0YTJkY2NjNGE5%0AMDg6CXVzZXIiC3VzZXJfMSIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6%0ARmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--fccc6e8c70627175172ba7f986a2b99a12c6db64
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.000349)[0m   [0mSELECT * FROM products LIMIT 30 OFFSET 0[0m
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/core.dryml in 0.02s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.01s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.04s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.28s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.06s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.17s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.05s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.03s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.05s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid.dryml in 0.89s
+  DRYML: Compiled /app/views/taglibs/themes/clean/clean.dryml in 0.01s
+  DRYML: Compiled /app/views/taglibs/application.dryml in 0.90s
+  DRYML: Compiled products/[tag-page] in 0.93s
+  [4;36;1mUser Load (0.000569)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+Completed in 1.09500 (0 reqs/sec) | Rendering: 1.09035 (99%) | DB: 0.00169 (0%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-06-29 12:34:20) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOThlNjMwZmI3YmEyNDM4ZTVkNmI0YTJkY2NjNGE5%0AMDg6DnJldHVybl90bzA6CXVzZXIiC3VzZXJfMSIKZmxhc2hJQzonQWN0aW9u%0AQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--95b4259c3f404f9af97907fa6fd62c96f0cf30d8
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.000650)[0m   [0mSELECT * FROM products LIMIT 30 OFFSET 0[0m
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/core.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.03s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.02s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid.dryml in 0.11s
+  DRYML: Compiled (from cache) /app/views/taglibs/themes/clean/clean.dryml in 0.00s
+  DRYML: Compiled (from cache) /app/views/taglibs/application.dryml in 0.11s
+  DRYML: Compiled products/[tag-page] in 0.12s
+  [4;36;1mSQL (0.000649)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mUser Load (0.000552)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+Completed in 0.30815 (3 reqs/sec) | Rendering: 0.30464 (98%) | DB: 0.00065 (0%) | 200 OK [http://localhost/products]
+
+
+Processing InvoicesController#index (for 127.0.0.1 at 2008-06-29 12:34:23) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOThlNjMwZmI3YmEyNDM4ZTVkNmI0YTJkY2NjNGE5%0AMDg6CXVzZXIiC3VzZXJfMToOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9u%0AQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--c64b379d1c87abb0e6ea81f7d81679a10dc9a6f7
+  Parameters: {"action"=>"index", "controller"=>"invoices"}
+  [4;36;1mInvoice Load (0.000656)[0m   [0;1mSELECT * FROM invoices LIMIT 30 OFFSET 0[0m
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/core.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.03s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.02s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid.dryml in 0.11s
+  DRYML: Compiled (from cache) /app/views/taglibs/themes/clean/clean.dryml in 0.00s
+  DRYML: Compiled (from cache) /app/views/taglibs/application.dryml in 0.12s
+  DRYML: Compiled invoices/[tag-page] in 0.12s
+  [4;35;1mSQL (0.000732)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mUser Load (0.000530)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+Completed in 0.31970 (3 reqs/sec) | Rendering: 0.31616 (98%) | DB: 0.00066 (0%) | 200 OK [http://localhost/invoices]
+
+
+Processing InvoicesController#new (for 127.0.0.1 at 2008-06-29 12:34:24) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOThlNjMwZmI3YmEyNDM4ZTVkNmI0YTJkY2NjNGE5%0AMDg6DnJldHVybl90bzA6CXVzZXIiC3VzZXJfMSIKZmxhc2hJQzonQWN0aW9u%0AQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--95b4259c3f404f9af97907fa6fd62c96f0cf30d8
+  Parameters: {"action"=>"new", "controller"=>"invoices"}
+  [4;35;1mSQL (0.000618)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mUser Load (0.000404)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/core.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.03s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.02s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid.dryml in 0.11s
+  DRYML: Compiled (from cache) /app/views/taglibs/themes/clean/clean.dryml in 0.00s
+  DRYML: Compiled (from cache) /app/views/taglibs/application.dryml in 0.11s
+  DRYML: Compiled invoices/[tag-page] in 0.12s
+  [4;35;1mCustomer Load (0.000324)[0m   [0mSELECT * FROM customers [0m
+Completed in 0.34662 (2 reqs/sec) | Rendering: 0.32176 (92%) | DB: 0.00102 (0%) | 200 OK [http://localhost/invoices/new]
+
+
+Processing FrontController#index (for 127.0.0.1 at 2008-06-29 12:37:46) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOThlNjMwZmI3YmEyNDM4ZTVkNmI0YTJkY2NjNGE5%0AMDg6CXVzZXIiC3VzZXJfMToOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9u%0AQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--c64b379d1c87abb0e6ea81f7d81679a10dc9a6f7
+  Parameters: {"action"=>"index", "controller"=>"front"}
+Rendering front/index
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/core.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.03s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.02s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid.dryml in 0.11s
+  DRYML: Compiled (from cache) /app/views/taglibs/themes/clean/clean.dryml in 0.00s
+  DRYML: Compiled (from cache) /app/views/taglibs/application.dryml in 0.11s
+  DRYML: Compiled app/views/front/index.dryml in 0.13s
+  [4;36;1mSQL (0.001240)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mUser Load (0.000505)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;36;1mCustomer Load (0.000277)[0m   [0;1mSELECT * FROM customers LIMIT 6[0m
+  [4;35;1mInvoice Load (0.000219)[0m   [0mSELECT * FROM invoices LIMIT 6[0m
+  [4;36;1mInvoiceItem Load (0.000249)[0m   [0;1mSELECT * FROM invoice_items LIMIT 6[0m
+  [4;35;1mProduct Load (0.000226)[0m   [0mSELECT * FROM products LIMIT 6[0m
+Completed in 0.37316 (2 reqs/sec) | Rendering: 0.36839 (98%) | DB: 0.00272 (0%) | 200 OK [http://localhost/]
+
+
+Processing InvoicesController#index (for 127.0.0.1 at 2008-06-29 12:37:51) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOThlNjMwZmI3YmEyNDM4ZTVkNmI0YTJkY2NjNGE5%0AMDg6DnJldHVybl90bzA6CXVzZXIiC3VzZXJfMSIKZmxhc2hJQzonQWN0aW9u%0AQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--95b4259c3f404f9af97907fa6fd62c96f0cf30d8
+  Parameters: {"action"=>"index", "controller"=>"invoices"}
+  [4;36;1mInvoice Load (0.000660)[0m   [0;1mSELECT * FROM invoices LIMIT 30 OFFSET 0[0m
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/core.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.03s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.02s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid.dryml in 0.11s
+  DRYML: Compiled (from cache) /app/views/taglibs/themes/clean/clean.dryml in 0.00s
+  DRYML: Compiled (from cache) /app/views/taglibs/application.dryml in 0.11s
+  DRYML: Compiled invoices/[tag-page] in 0.12s
+  [4;35;1mSQL (0.000659)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mUser Load (0.000545)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+Completed in 0.32200 (3 reqs/sec) | Rendering: 0.31826 (98%) | DB: 0.00066 (0%) | 200 OK [http://localhost/invoices]
+
+
+Processing InvoicesController#new (for 127.0.0.1 at 2008-06-29 12:37:53) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOThlNjMwZmI3YmEyNDM4ZTVkNmI0YTJkY2NjNGE5%0AMDg6CXVzZXIiC3VzZXJfMToOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9u%0AQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--c64b379d1c87abb0e6ea81f7d81679a10dc9a6f7
+  Parameters: {"action"=>"new", "controller"=>"invoices"}
+  [4;35;1mSQL (0.000649)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mUser Load (0.000435)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/core.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.03s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.02s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid.dryml in 0.11s
+  DRYML: Compiled (from cache) /app/views/taglibs/themes/clean/clean.dryml in 0.00s
+  DRYML: Compiled (from cache) /app/views/taglibs/application.dryml in 0.11s
+  DRYML: Compiled invoices/[tag-page] in 0.12s
+  [4;35;1mCustomer Load (0.000299)[0m   [0mSELECT * FROM customers [0m
+Completed in 0.41054 (2 reqs/sec) | Rendering: 0.38448 (93%) | DB: 0.00108 (0%) | 200 OK [http://localhost/invoices/new]
+  [4;36;1mSQL (0.001281)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing InvoicesController#new (for 127.0.0.1 at 2008-06-29 12:38:21) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOThlNjMwZmI3YmEyNDM4ZTVkNmI0YTJkY2NjNGE5%0AMDg6DnJldHVybl90bzA6CXVzZXIiC3VzZXJfMSIKZmxhc2hJQzonQWN0aW9u%0AQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--95b4259c3f404f9af97907fa6fd62c96f0cf30d8
+  Parameters: {"action"=>"new", "controller"=>"invoices"}
+  [4;35;1mUser Load (0.000438)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/core.dryml in 0.02s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.01s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.03s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.28s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.06s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.17s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.05s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.03s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.05s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid.dryml in 0.88s
+  DRYML: Compiled /app/views/taglibs/themes/clean/clean.dryml in 0.01s
+  DRYML: Compiled /app/views/taglibs/application.dryml in 0.89s
+  DRYML: Compiled invoices/[tag-page] in 0.93s
+  [4;36;1mCustomer Load (0.000334)[0m   [0;1mSELECT * FROM customers [0m
+Completed in 1.10004 (0 reqs/sec) | Rendering: 1.09145 (99%) | DB: 0.00172 (0%) | 200 OK [http://localhost/invoices/new]
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2008-06-29 12:38:24) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMY3NyZl9pZCIlOThlNjMwZmI3YmEyNDM4ZTVk%0ANmI0YTJkY2NjNGE5MDg6CXVzZXIiC3VzZXJfMSIKZmxhc2hJQzonQWN0aW9u%0AQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--d9ef57fd34305b114d684b3f1ebe2e5df20abde8
+  Parameters: {"action"=>"index", "controller"=>"customers"}
+  [4;35;1mCustomer Load (0.000720)[0m   [0mSELECT * FROM customers LIMIT 30 OFFSET 0[0m
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/core.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.03s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.02s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid.dryml in 0.11s
+  DRYML: Compiled (from cache) /app/views/taglibs/themes/clean/clean.dryml in 0.00s
+  DRYML: Compiled (from cache) /app/views/taglibs/application.dryml in 0.11s
+  DRYML: Compiled customers/[tag-page] in 0.12s
+  [4;36;1mSQL (0.000673)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mUser Load (0.000471)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+Completed in 0.31242 (3 reqs/sec) | Rendering: 0.30867 (98%) | DB: 0.00072 (0%) | 200 OK [http://localhost/customers]
+
+
+Processing InvoicesController#index (for 127.0.0.1 at 2008-06-29 12:38:26) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOThlNjMwZmI3YmEyNDM4ZTVkNmI0YTJkY2NjNGE5%0AMDg6DnJldHVybl90bzA6CXVzZXIiC3VzZXJfMSIKZmxhc2hJQzonQWN0aW9u%0AQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--95b4259c3f404f9af97907fa6fd62c96f0cf30d8
+  Parameters: {"action"=>"index", "controller"=>"invoices"}
+  [4;36;1mInvoice Load (0.000652)[0m   [0;1mSELECT * FROM invoices LIMIT 30 OFFSET 0[0m
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/core.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.03s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.02s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid.dryml in 0.11s
+  DRYML: Compiled (from cache) /app/views/taglibs/themes/clean/clean.dryml in 0.00s
+  DRYML: Compiled (from cache) /app/views/taglibs/application.dryml in 0.11s
+  DRYML: Compiled invoices/[tag-page] in 0.12s
+  [4;35;1mSQL (0.001445)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mUser Load (0.001324)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+Completed in 0.30991 (3 reqs/sec) | Rendering: 0.30641 (98%) | DB: 0.00065 (0%) | 200 OK [http://localhost/invoices]
+
+
+Processing InvoicesController#new (for 127.0.0.1 at 2008-06-29 12:38:28) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMY3NyZl9pZCIlOThlNjMwZmI3YmEyNDM4ZTVk%0ANmI0YTJkY2NjNGE5MDg6CXVzZXIiC3VzZXJfMSIKZmxhc2hJQzonQWN0aW9u%0AQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--d9ef57fd34305b114d684b3f1ebe2e5df20abde8
+  Parameters: {"action"=>"new", "controller"=>"invoices"}
+  [4;35;1mSQL (0.000620)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mUser Load (0.000433)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/core.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.03s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.02s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid.dryml in 0.11s
+  DRYML: Compiled (from cache) /app/views/taglibs/themes/clean/clean.dryml in 0.00s
+  DRYML: Compiled (from cache) /app/views/taglibs/application.dryml in 0.11s
+  DRYML: Compiled invoices/[tag-page] in 0.12s
+  [4;35;1mCustomer Load (0.000298)[0m   [0mSELECT * FROM customers [0m
+Completed in 0.33575 (2 reqs/sec) | Rendering: 0.31184 (92%) | DB: 0.00105 (0%) | 200 OK [http://localhost/invoices/new]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-06-29 12:38:31) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOThlNjMwZmI3YmEyNDM4ZTVkNmI0YTJkY2NjNGE5%0AMDg6DnJldHVybl90bzA6CXVzZXIiC3VzZXJfMSIKZmxhc2hJQzonQWN0aW9u%0AQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--95b4259c3f404f9af97907fa6fd62c96f0cf30d8
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;36;1mProduct Load (0.000658)[0m   [0;1mSELECT * FROM products LIMIT 30 OFFSET 0[0m
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/core.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.03s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.02s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid.dryml in 0.11s
+  DRYML: Compiled (from cache) /app/views/taglibs/themes/clean/clean.dryml in 0.00s
+  DRYML: Compiled (from cache) /app/views/taglibs/application.dryml in 0.11s
+  DRYML: Compiled products/[tag-page] in 0.12s
+  [4;35;1mSQL (0.000701)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mUser Load (0.000489)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+Completed in 0.32430 (3 reqs/sec) | Rendering: 0.32072 (98%) | DB: 0.00066 (0%) | 200 OK [http://localhost/products]
