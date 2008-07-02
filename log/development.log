@@ -1491,3 +1491,504 @@ Migrating to CreateCategories (7)
   [4;36;1mSQL (0.000072)[0m   [0;1mPRAGMA index_list(invoices)[0m
   [4;35;1mSQL (0.000077)[0m   [0mPRAGMA index_list(products)[0m
   [4;36;1mSQL (0.000074)[0m   [0;1mPRAGMA index_list(users)[0m
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2008-07-01 22:55:18) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMmNmMWYzMjVmMDJjNzExOWQ4MDgxMGEyZjU0OGZm%0ANTg6CXVzZXIiC3VzZXJfMSIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6%0ARmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--d9283b62a02b11f2a9d3afb9cd5219170955fed5
+  Parameters: {"action"=>"new", "controller"=>"products"}
+  [4;35;1mSQL (0.000654)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mUser Load (0.000435)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/core.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.03s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.02s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid.dryml in 0.12s
+  DRYML: Compiled (from cache) /app/views/taglibs/themes/clean/clean.dryml in 0.00s
+  DRYML: Compiled (from cache) /app/views/taglibs/application.dryml in 0.12s
+  DRYML: Compiled products/[tag-page] in 0.12s
+  [4;35;1mCategory Load (0.000301)[0m   [0mSELECT * FROM categories [0m
+Completed in 0.37379 (2 reqs/sec) | Rendering: 0.34879 (93%) | DB: 0.00109 (0%) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2008-07-01 22:55:27) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMmNmMWYzMjVmMDJjNzExOWQ4MDgxMGEyZjU0OGZm%0ANTg6CXVzZXIiC3VzZXJfMSIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6%0ARmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--d9283b62a02b11f2a9d3afb9cd5219170955fed5
+  Parameters: {"action"=>"new", "controller"=>"products"}
+  [4;36;1mSQL (0.000676)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mUser Load (0.000437)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/core.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.03s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.02s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid.dryml in 0.11s
+  DRYML: Compiled (from cache) /app/views/taglibs/themes/clean/clean.dryml in 0.00s
+  DRYML: Compiled (from cache) /app/views/taglibs/application.dryml in 0.11s
+  DRYML: Compiled products/[tag-page] in 0.12s
+  [4;36;1mCategory Load (0.000284)[0m   [0;1mSELECT * FROM categories [0m
+Completed in 0.37209 (2 reqs/sec) | Rendering: 0.34701 (93%) | DB: 0.00111 (0%) | 200 OK [http://localhost/products/new]
+  [4;36;1mSQL (0.001919)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2008-07-01 22:55:37) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMmNmMWYzMjVmMDJjNzExOWQ4MDgxMGEyZjU0OGZm%0ANTg6CXVzZXIiC3VzZXJfMSIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6%0ARmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--d9283b62a02b11f2a9d3afb9cd5219170955fed5
+  Parameters: {"action"=>"new", "controller"=>"products"}
+  [4;35;1mUser Load (0.000452)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/core.dryml in 0.02s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.01s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.04s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.28s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.06s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.08s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.15s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.03s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.05s
+  DRYML: Compiled /vendor/plugins/hobo/taglibs/rapid.dryml in 0.91s
+  DRYML: Compiled /app/views/taglibs/themes/clean/clean.dryml in 0.01s
+  DRYML: Compiled /app/views/taglibs/application.dryml in 0.92s
+  DRYML: Compiled products/[tag-page] in 0.95s
+  [4;36;1mCategory Load (0.000307)[0m   [0;1mSELECT * FROM categories [0m
+Completed in 1.11667 (0 reqs/sec) | Rendering: 1.10687 (99%) | DB: 0.00237 (0%) | 200 OK [http://localhost/products/new]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2008-07-01 22:55:42) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMmNmMWYzMjVmMDJjNzExOWQ4MDgxMGEyZjU0OGZm%0ANTg6DnJldHVybl90bzA6CXVzZXIiC3VzZXJfMSIKZmxhc2hJQzonQWN0aW9u%0AQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--681cb059021c26c439f912cd464aa8f40ea1590d
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mCategory Load (0.000675)[0m   [0mSELECT * FROM categories LIMIT 30 OFFSET 0[0m
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/core.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.03s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.02s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid.dryml in 0.11s
+  DRYML: Compiled (from cache) /app/views/taglibs/themes/clean/clean.dryml in 0.00s
+  DRYML: Compiled (from cache) /app/views/taglibs/application.dryml in 0.11s
+  DRYML: Compiled categories/[tag-page] in 0.12s
+  [4;36;1mSQL (0.000759)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mUser Load (0.000507)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+Completed in 0.32414 (3 reqs/sec) | Rendering: 0.32054 (98%) | DB: 0.00067 (0%) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2008-07-01 22:55:44) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMmNmMWYzMjVmMDJjNzExOWQ4MDgxMGEyZjU0OGZm%0ANTg6DnJldHVybl90bzA6CXVzZXIiC3VzZXJfMSIKZmxhc2hJQzonQWN0aW9u%0AQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--681cb059021c26c439f912cd464aa8f40ea1590d
+  Parameters: {"action"=>"new", "controller"=>"categories"}
+  [4;36;1mSQL (0.000651)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mUser Load (0.000409)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/core.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.02s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.02s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid.dryml in 0.11s
+  DRYML: Compiled (from cache) /app/views/taglibs/themes/clean/clean.dryml in 0.00s
+  DRYML: Compiled (from cache) /app/views/taglibs/application.dryml in 0.11s
+  DRYML: Compiled categories/[tag-page] in 0.12s
+Completed in 0.34275 (2 reqs/sec) | Rendering: 0.31983 (93%) | DB: 0.00106 (0%) | 200 OK [http://localhost/categories/new]
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2008-07-01 22:56:33) [POST]
+  Session ID: BAh7CToMY3NyZl9pZCIlMmNmMWYzMjVmMDJjNzExOWQ4MDgxMGEyZjU0OGZm%0ANTg6DnJldHVybl90bzA6CXVzZXIiC3VzZXJfMSIKZmxhc2hJQzonQWN0aW9u%0AQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--681cb059021c26c439f912cd464aa8f40ea1590d
+  Parameters: {"category"=>{"name"=>"Perfumes - Les Classiques"}, "page_path"=>"categories/new", "authenticity_token"=>"de4dc40a432831729786ff68b11f8510c1ee46ad", "action"=>"create", "controller"=>"categories"}
+  [4;36;1mSQL (0.000691)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mUser Load (0.000392)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;36;1mCategory Load (0.000185)[0m   [0;1mSELECT * FROM categories WHERE (categories.name = 'Perfumes - Les Classiques') LIMIT 1[0m
+  [4;35;1mCategory Create (0.000498)[0m   [0mINSERT INTO categories ("name", "updated_at", "created_at") VALUES('Perfumes - Les Classiques', '2008-07-01 22:56:33', '2008-07-01 22:56:33')[0m
+Redirected to http://localhost:3000/categories/1
+Completed in 0.02976 (33 reqs/sec) | DB: 0.00177 (5%) | 302 Found [http://localhost/categories]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2008-07-01 22:56:33) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMmNmMWYzMjVmMDJjNzExOWQ4MDgxMGEyZjU0OGZm%0ANTg6DnJldHVybl90bzA6CXVzZXIiC3VzZXJfMSIKZmxhc2hJQzonQWN0aW9u%0AQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiKlRoZSBj%0AYXRlZ29yeSB3YXMgY3JlYXRlZCBzdWNjZXNzZnVsbHkGOgpAdXNlZHsGOwlU--9078d5e9b77f0cfd8b7027749dad15e118c51080
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"categories"}
+  [4;36;1mSQL (0.001114)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mUser Load (0.000429)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;36;1mCategory Load (0.000294)[0m   [0;1mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/core.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.03s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.02s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.12s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid.dryml in 0.23s
+  DRYML: Compiled (from cache) /app/views/taglibs/themes/clean/clean.dryml in 0.00s
+  DRYML: Compiled (from cache) /app/views/taglibs/application.dryml in 0.23s
+  DRYML: Compiled categories/[tag-page] in 0.24s
+Completed in 0.34129 (2 reqs/sec) | Rendering: 0.31867 (93%) | DB: 0.00184 (0%) | 200 OK [http://localhost/categories/1]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-07-01 22:56:38) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMmNmMWYzMjVmMDJjNzExOWQ4MDgxMGEyZjU0OGZm%0ANTg6DnJldHVybl90bzA6CXVzZXIiC3VzZXJfMSIKZmxhc2hJQzonQWN0aW9u%0AQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--681cb059021c26c439f912cd464aa8f40ea1590d
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.000681)[0m   [0mSELECT * FROM products LIMIT 30 OFFSET 0[0m
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/core.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.03s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.02s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid.dryml in 0.11s
+  DRYML: Compiled (from cache) /app/views/taglibs/themes/clean/clean.dryml in 0.00s
+  DRYML: Compiled (from cache) /app/views/taglibs/application.dryml in 0.11s
+  DRYML: Compiled products/[tag-page] in 0.12s
+  [4;36;1mSQL (0.000675)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mUser Load (0.000510)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+Completed in 0.32550 (3 reqs/sec) | Rendering: 0.32182 (98%) | DB: 0.00068 (0%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2008-07-01 22:56:42) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMmNmMWYzMjVmMDJjNzExOWQ4MDgxMGEyZjU0OGZm%0ANTg6DnJldHVybl90bzA6CXVzZXIiC3VzZXJfMSIKZmxhc2hJQzonQWN0aW9u%0AQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--681cb059021c26c439f912cd464aa8f40ea1590d
+  Parameters: {"action"=>"new", "controller"=>"products"}
+  [4;36;1mSQL (0.000672)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mUser Load (0.000388)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/core.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.03s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.02s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.11s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid.dryml in 0.22s
+  DRYML: Compiled (from cache) /app/views/taglibs/themes/clean/clean.dryml in 0.00s
+  DRYML: Compiled (from cache) /app/views/taglibs/application.dryml in 0.22s
+  DRYML: Compiled products/[tag-page] in 0.22s
+  [4;36;1mCategory Load (0.000476)[0m   [0;1mSELECT * FROM categories [0m
+Completed in 0.35542 (2 reqs/sec) | Rendering: 0.33043 (92%) | DB: 0.00106 (0%) | 200 OK [http://localhost/products/new]
+
+
+Processing FrontController#index (for 127.0.0.1 at 2008-07-01 22:57:03) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMmNmMWYzMjVmMDJjNzExOWQ4MDgxMGEyZjU0OGZm%0ANTg6DnJldHVybl90bzA6CXVzZXIiC3VzZXJfMSIKZmxhc2hJQzonQWN0aW9u%0AQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--681cb059021c26c439f912cd464aa8f40ea1590d
+  Parameters: {"action"=>"index", "controller"=>"front"}
+Rendering front/index
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/core.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.13s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.02s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid.dryml in 0.22s
+  DRYML: Compiled (from cache) /app/views/taglibs/themes/clean/clean.dryml in 0.00s
+  DRYML: Compiled (from cache) /app/views/taglibs/application.dryml in 0.22s
+  DRYML: Compiled app/views/front/index.dryml in 0.23s
+  [4;35;1mSQL (0.001099)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mUser Load (0.000451)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;35;1mCategory Load (0.000369)[0m   [0mSELECT * FROM categories LIMIT 6[0m
+  [4;36;1mCustomer Load (0.000594)[0m   [0;1mSELECT * FROM customers LIMIT 6[0m
+  [4;35;1mInvoice Load (0.000249)[0m   [0mSELECT * FROM invoices LIMIT 6[0m
+  [4;36;1mInvoiceItem Load (0.000257)[0m   [0;1mSELECT * FROM invoice_items LIMIT 6[0m
+  [4;35;1mProduct Load (0.000227)[0m   [0mSELECT * FROM products LIMIT 6[0m
+Completed in 0.51646 (1 reqs/sec) | Rendering: 0.51041 (98%) | DB: 0.00325 (0%) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.001337)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000669)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000163)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.001457)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000260)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000322)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000218)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000214)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000214)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000215)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000239)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000221)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000238)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to AddSupplierCode (8)
+  [4;36;1mSQL (0.003250)[0m   [0;1mALTER TABLE products ADD "supplier_code" varchar(255)[0m
+  [4;35;1mSQL (0.011805)[0m   [0mVACUUM[0m
+  [4;36;1mSQL (0.002390)[0m   [0;1mUPDATE schema_info SET version = 8[0m
+  [4;35;1mSQL (0.000310)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000536)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000125)[0m   [0mPRAGMA index_list(categories)[0m
+  [4;36;1mSQL (0.000080)[0m   [0;1mPRAGMA index_list(customers)[0m
+  [4;35;1mSQL (0.000089)[0m   [0mPRAGMA index_list(invoice_items)[0m
+  [4;36;1mSQL (0.000069)[0m   [0;1mPRAGMA index_list(invoices)[0m
+  [4;35;1mSQL (0.000069)[0m   [0mPRAGMA index_list(products)[0m
+  [4;36;1mSQL (0.000078)[0m   [0;1mPRAGMA index_list(users)[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-07-01 22:59:25) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMmNmMWYzMjVmMDJjNzExOWQ4MDgxMGEyZjU0OGZm%0ANTg6DnJldHVybl90bzA6CXVzZXIiC3VzZXJfMSIKZmxhc2hJQzonQWN0aW9u%0AQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--681cb059021c26c439f912cd464aa8f40ea1590d
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;36;1mProduct Load (0.000702)[0m   [0;1mSELECT * FROM products LIMIT 30 OFFSET 0[0m
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/core.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.02s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.02s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid.dryml in 0.11s
+  DRYML: Compiled (from cache) /app/views/taglibs/themes/clean/clean.dryml in 0.00s
+  DRYML: Compiled (from cache) /app/views/taglibs/application.dryml in 0.11s
+  DRYML: Compiled products/[tag-page] in 0.12s
+  [4;35;1mSQL (0.000782)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mUser Load (0.000500)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+Completed in 0.33780 (2 reqs/sec) | Rendering: 0.33409 (98%) | DB: 0.00070 (0%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2008-07-01 22:59:27) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMmNmMWYzMjVmMDJjNzExOWQ4MDgxMGEyZjU0OGZm%0ANTg6DnJldHVybl90bzA6CXVzZXIiC3VzZXJfMSIKZmxhc2hJQzonQWN0aW9u%0AQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--681cb059021c26c439f912cd464aa8f40ea1590d
+  Parameters: {"action"=>"new", "controller"=>"products"}
+  [4;35;1mSQL (0.000651)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mUser Load (0.000404)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/core.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.03s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.02s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid.dryml in 0.11s
+  DRYML: Compiled (from cache) /app/views/taglibs/themes/clean/clean.dryml in 0.00s
+  DRYML: Compiled (from cache) /app/views/taglibs/application.dryml in 0.11s
+  DRYML: Compiled products/[tag-page] in 0.12s
+  [4;35;1mCategory Load (0.000463)[0m   [0mSELECT * FROM categories [0m
+Completed in 0.36085 (2 reqs/sec) | Rendering: 0.33578 (93%) | DB: 0.00106 (0%) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2008-07-01 22:59:29) [POST]
+  Session ID: BAh7CToMY3NyZl9pZCIlMmNmMWYzMjVmMDJjNzExOWQ4MDgxMGEyZjU0OGZm%0ANTg6DnJldHVybl90bzA6CXVzZXIiC3VzZXJfMSIKZmxhc2hJQzonQWN0aW9u%0AQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--681cb059021c26c439f912cd464aa8f40ea1590d
+  Parameters: {"page_path"=>"products/new", "product"=>{"name"=>"", "supplier_code"=>"", "price"=>"", "available"=>"0", "code"=>"", "stock"=>"", "category_id"=>""}, "authenticity_token"=>"de4dc40a432831729786ff68b11f8510c1ee46ad", "action"=>"create", "controller"=>"products"}
+  [4;36;1mSQL (0.000654)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mUser Load (0.000412)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;36;1mProduct Load (0.000195)[0m   [0;1mSELECT * FROM products WHERE (products.name = '') LIMIT 1[0m
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/core.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.03s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.02s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.12s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid.dryml in 0.22s
+  DRYML: Compiled (from cache) /app/views/taglibs/themes/clean/clean.dryml in 0.00s
+  DRYML: Compiled (from cache) /app/views/taglibs/application.dryml in 0.22s
+  DRYML: Compiled products/[tag-page] in 0.23s
+  [4;35;1mCategory Load (0.000480)[0m   [0mSELECT * FROM categories [0m
+Completed in 0.36859 (2 reqs/sec) | Rendering: 0.34215 (92%) | DB: 0.00126 (0%) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2008-07-01 23:00:32) [POST]
+  Session ID: BAh7CToMY3NyZl9pZCIlMmNmMWYzMjVmMDJjNzExOWQ4MDgxMGEyZjU0OGZm%0ANTg6DnJldHVybl90bzA6CXVzZXIiC3VzZXJfMSIKZmxhc2hJQzonQWN0aW9u%0AQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--681cb059021c26c439f912cd464aa8f40ea1590d
+  Parameters: {"page_path"=>"products/new", "product"=>{"name"=>"32 Carolina Herrera 212", "supplier_code"=>"32", "price"=>"30", "available"=>"1", "code"=>"chm", "stock"=>"", "category_id"=>"1"}, "authenticity_token"=>"de4dc40a432831729786ff68b11f8510c1ee46ad", "action"=>"create", "controller"=>"products"}
+  [4;36;1mSQL (0.000670)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mUser Load (0.000473)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;36;1mProduct Load (0.000225)[0m   [0;1mSELECT * FROM products WHERE (products.name = '32 Carolina Herrera 212') LIMIT 1[0m
+  [4;35;1mProduct Load (0.000117)[0m   [0mSELECT * FROM products WHERE (products.code = 'chm') LIMIT 1[0m
+  [4;36;1mProduct Load (0.000120)[0m   [0;1mSELECT * FROM products WHERE (products.supplier_code = '32') LIMIT 1[0m
+  [4;35;1mProduct Create (0.000404)[0m   [0mINSERT INTO products ("name", "supplier_code", "updated_at", "available", "code", "price", "stock", "category_id", "created_at") VALUES('32 Carolina Herrera 212', '32', '2008-07-01 23:00:32', 't', 'chm', 30.0, NULL, 1, '2008-07-01 23:00:32')[0m
+Redirected to http://localhost:3000/products/1
+Completed in 0.03364 (29 reqs/sec) | DB: 0.00201 (5%) | 302 Found [http://localhost/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2008-07-01 23:00:32) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMmNmMWYzMjVmMDJjNzExOWQ4MDgxMGEyZjU0OGZm%0ANTg6DnJldHVybl90bzA6CXVzZXIiC3VzZXJfMSIKZmxhc2hJQzonQWN0aW9u%0AQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiKVRoZSBw%0Acm9kdWN0IHdhcyBjcmVhdGVkIHN1Y2Nlc3NmdWxseQY6CkB1c2VkewY7CVQ%3D--fc4fef16351457163186ef0a2ad6b362d465fae2
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"products"}
+  [4;36;1mSQL (0.001118)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mUser Load (0.000589)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;36;1mProduct Load (0.000518)[0m   [0;1mSELECT * FROM products WHERE (products."id" = 1) [0m
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/core.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.03s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.02s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid.dryml in 0.11s
+  DRYML: Compiled (from cache) /app/views/taglibs/themes/clean/clean.dryml in 0.00s
+  DRYML: Compiled (from cache) /app/views/taglibs/application.dryml in 0.12s
+  DRYML: Compiled products/[tag-page] in 0.12s
+  [4;35;1mCategory Load (0.000370)[0m   [0mSELECT * FROM categories WHERE (categories."id" = 1) [0m
+Completed in 0.38302 (2 reqs/sec) | Rendering: 0.32766 (85%) | DB: 0.00222 (0%) | 200 OK [http://localhost/products/1]
+
+
+Processing InvoicesController#index (for 127.0.0.1 at 2008-07-01 23:00:47) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMmNmMWYzMjVmMDJjNzExOWQ4MDgxMGEyZjU0OGZm%0ANTg6DnJldHVybl90bzA6CXVzZXIiC3VzZXJfMSIKZmxhc2hJQzonQWN0aW9u%0AQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--681cb059021c26c439f912cd464aa8f40ea1590d
+  Parameters: {"action"=>"index", "controller"=>"invoices"}
+  [4;36;1mInvoice Load (0.000673)[0m   [0;1mSELECT * FROM invoices LIMIT 30 OFFSET 0[0m
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/core.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.03s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.02s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid.dryml in 0.11s
+  DRYML: Compiled (from cache) /app/views/taglibs/themes/clean/clean.dryml in 0.00s
+  DRYML: Compiled (from cache) /app/views/taglibs/application.dryml in 0.11s
+  DRYML: Compiled invoices/[tag-page] in 0.12s
+  [4;35;1mSQL (0.000717)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mUser Load (0.000462)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+Completed in 0.33512 (2 reqs/sec) | Rendering: 0.33153 (98%) | DB: 0.00067 (0%) | 200 OK [http://localhost/invoices]
+
+
+Processing InvoicesController#new (for 127.0.0.1 at 2008-07-01 23:00:50) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMmNmMWYzMjVmMDJjNzExOWQ4MDgxMGEyZjU0OGZm%0ANTg6DnJldHVybl90bzA6CXVzZXIiC3VzZXJfMSIKZmxhc2hJQzonQWN0aW9u%0AQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--681cb059021c26c439f912cd464aa8f40ea1590d
+  Parameters: {"action"=>"new", "controller"=>"invoices"}
+  [4;35;1mSQL (0.000653)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mUser Load (0.000464)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/core.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.03s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.02s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid.dryml in 0.11s
+  DRYML: Compiled (from cache) /app/views/taglibs/themes/clean/clean.dryml in 0.00s
+  DRYML: Compiled (from cache) /app/views/taglibs/application.dryml in 0.11s
+  DRYML: Compiled invoices/[tag-page] in 0.12s
+  [4;35;1mCustomer Load (0.000988)[0m   [0mSELECT * FROM customers [0m
+Completed in 0.36865 (2 reqs/sec) | Rendering: 0.34418 (93%) | DB: 0.00112 (0%) | 200 OK [http://localhost/invoices/new]
+
+
+Processing InvoiceItemsController#index (for 127.0.0.1 at 2008-07-01 23:00:56) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMmNmMWYzMjVmMDJjNzExOWQ4MDgxMGEyZjU0OGZm%0ANTg6DnJldHVybl90bzA6CXVzZXIiC3VzZXJfMSIKZmxhc2hJQzonQWN0aW9u%0AQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--681cb059021c26c439f912cd464aa8f40ea1590d
+  Parameters: {"action"=>"index", "controller"=>"invoice_items"}
+  [4;36;1mInvoiceItem Load (0.000679)[0m   [0;1mSELECT * FROM invoice_items LIMIT 30 OFFSET 0[0m
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/core.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.03s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.02s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid.dryml in 0.22s
+  DRYML: Compiled (from cache) /app/views/taglibs/themes/clean/clean.dryml in 0.00s
+  DRYML: Compiled (from cache) /app/views/taglibs/application.dryml in 0.22s
+  DRYML: Compiled invoice_items/[tag-page] in 0.23s
+  [4;35;1mSQL (0.000701)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mUser Load (0.000469)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+Completed in 0.33715 (2 reqs/sec) | Rendering: 0.33351 (98%) | DB: 0.00068 (0%) | 200 OK [http://localhost/invoice_items]
+
+
+Processing InvoiceItemsController#new (for 127.0.0.1 at 2008-07-01 23:00:58) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMmNmMWYzMjVmMDJjNzExOWQ4MDgxMGEyZjU0OGZm%0ANTg6DnJldHVybl90bzA6CXVzZXIiC3VzZXJfMSIKZmxhc2hJQzonQWN0aW9u%0AQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--681cb059021c26c439f912cd464aa8f40ea1590d
+  Parameters: {"action"=>"new", "controller"=>"invoice_items"}
+  [4;35;1mSQL (0.000668)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mUser Load (0.000451)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/core.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_support.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_document_tags.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_pages.dryml in 0.03s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_editing.dryml in 0.13s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_forms.dryml in 0.02s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_navigation.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_plus.dryml in 0.00s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid_generics.dryml in 0.01s
+  DRYML: Compiled (from cache) /vendor/plugins/hobo/taglibs/rapid.dryml in 0.23s
+  DRYML: Compiled (from cache) /app/views/taglibs/themes/clean/clean.dryml in 0.00s
+  DRYML: Compiled (from cache) /app/views/taglibs/application.dryml in 0.23s
+  DRYML: Compiled invoice_items/[tag-page] in 0.23s
+  [4;35;1mInvoice Load (0.000290)[0m   [0mSELECT * FROM invoices [0m
+  [4;36;1mProduct Load (0.000507)[0m   [0;1mSELECT * FROM products [0m
+Completed in 0.37636 (2 reqs/sec) | Rendering: 0.35043 (93%) | DB: 0.00112 (0%) | 200 OK [http://localhost/invoice_items/new]
