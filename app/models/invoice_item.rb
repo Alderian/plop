@@ -2,6 +2,8 @@ class InvoiceItem < ActiveRecord::Base
 
   hobo_model # Don't put anything above this
 
+  belongs_to :invoice
+  belongs_to :product
   fields do
     invoice_id :integer
     product_id :integer
@@ -12,8 +14,6 @@ class InvoiceItem < ActiveRecord::Base
     timestamps
   end
 
-  belongs_to :invoice
-  belongs_to :product
 
   # --- Hobo Permissions --- #
 

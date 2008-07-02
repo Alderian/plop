@@ -1,22 +1,16 @@
-class Product < ActiveRecord::Base
+class Category < ActiveRecord::Base
 
   hobo_model # Don't put anything above this
 
-  belongs_to :category
+  has_many :products
 
   fields do
     name :string
-    code :string
-    stock :integer
-    price :decimal,  :precision => 8, :scale => 2
-    available :boolean
     timestamps
   end
 
   validates_presence_of :name, :message => "can't be blank"
-  validates_uniqueness_of :name, :message => "must be unique"
-  validates_presence_of :price, :message => "can't be blank"
-  validates_uniqueness_of :code, :message => "must be unique",:unless => Proc.new { |product| product.code.blank? }
+  validates_uniqueness_of :name,  :message => "must be unique"
 
   # --- Hobo Permissions --- #
 
