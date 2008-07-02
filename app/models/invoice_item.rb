@@ -18,15 +18,15 @@ class InvoiceItem < ActiveRecord::Base
   # --- Hobo Permissions --- #
 
   def creatable_by?(user)
-    user.administrator?
+    !user.guest?
   end
 
   def updatable_by?(user, new)
-    user.administrator?
+    !user.guest?
   end
 
   def deletable_by?(user)
-    user.administrator?
+    !user.guest?
   end
 
   def viewable_by?(user, field)

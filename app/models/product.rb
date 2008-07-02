@@ -8,6 +8,7 @@ class Product < ActiveRecord::Base
     name :string
     code :string
     supplier_code :string
+    gender :boolean
     stock :integer
     price :decimal,  :precision => 8, :scale => 2
     available :boolean
@@ -24,15 +25,15 @@ class Product < ActiveRecord::Base
   # --- Hobo Permissions --- #
 
   def creatable_by?(user)
-    user.administrator?
+    !user.guest?
   end
 
   def updatable_by?(user, new)
-    user.administrator?
+    !user.guest?
   end
 
   def deletable_by?(user)
-    user.administrator?
+    !user.guest?
   end
 
   def viewable_by?(user, field)
