@@ -6,3 +6,13 @@
 
 <def tag="app-name">Plop</def>
 
+
+<def tag="card" for="Invoice">
+  <base-card merge>
+    <creation-details: replace>
+      <div class="invoice_items">
+        Invoice Items: <repeat:invoice_items join=", "><a/></repeat><else>None</else>
+      </div>
+    </creation-details:>
+  </base-card>
+</def>
