@@ -1,0 +1,28 @@
+  <%= yui_grids_stylesheet_link_tags %>  
+  <% yui_page :width => YUIPages::PAGE_750, :secondary => YUIPages::RIGHT_180 do %>
+    <% header do %>
+      <p>Page title</p>
+    <% end %>
+  
+    <% body do %>
+      <% main do %>
+        <% grid :columns => YUIPages::GRID_75_25 do %>
+          <% unit do %>
+            Content for the 75% width first column.
+          <% end %>
+          <% unit do %>
+            Content for the 25% width second column.
+          <% end %>
+        <% end %>
+      <% end %>
+    
+      <% secondary do %>
+        <p>Content for the 180px right sidebar.</p>
+      <% end %>      
+    <% end %>
+  
+    <% footer do %>
+      <p>Footer links here</p>
+    <% end %>
+  <% end %>
+</body>

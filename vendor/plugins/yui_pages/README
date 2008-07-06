@@ -1,0 +1,61 @@
+= YUI Pages
+
+by Bryan Helmkamp <bryan@brynary.com>.
+
+== DESCRIPTION:
+
+YUI Pages is a plugin to easily write views and layouts leveraging the YUI
+Grids CSS system (http://developer.yahoo.com/yui/grids/).
+
+== SYNOPSIS:
+
+In the head tag:
+  
+  <%= yui_grids_stylesheet_link_tags %>
+    
+In the body tag:
+  
+  <% yui_page :width => YUIPages::PAGE_750, :secondary => YUIPages::RIGHT_180 do %>
+    <% header do %>
+      <p>Page title</p>
+    <% end %>
+  
+    <% body do %>
+      <% main do %>
+        <% grid :columns => YUIPages::GRID_75_25 do %>
+          <% unit do %>
+            Content for the 75% width first column.
+          <% end %>
+          <% unit do %>
+            Content for the 25% width second column.
+          <% end %>
+        <% end %>
+      <% end %>
+    
+      <% secondary do %>
+        <p>Content for the 180px right sidebar.</p>
+      <% end %>      
+    <% end %>
+  
+    <% footer do %>
+      <p>Footer links here</p>
+    <% end %>
+  <% end %>
+
+The first line specifies a page width of 750px and a sidebar on the right of 180px. Inside the <tt>body</tt> block, the primary content is defined in the <tt>main</tt> block and the sidebar content is defined in the <tt>secondary</tt> block.
+
+Within the main content we've got two grids, forming a total of three columns. The outer grid splits the page 75%/25% and the inner grid splits
+the 75% column in half into two 37.5% columns. By combining grids like this, you can build arbitrarily complex grid layouts using the plugin.
+
+== INSTALL:
+
+  $ ruby script/plugin install http://svn.eastmedia.net/public/plugins/yui_pages/
+
+== HISTORY:
+
+See CHANGELOG in this directory.
+
+== LICENSE:
+
+Copyright (c) 2007 Bryan Helmkamp.
+See MIT-LICENSE in this directory.
