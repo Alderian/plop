@@ -1,0 +1,17 @@
+#nav ul {
+	
+}
+#nav li {
+	float:left;
+	padding:5px;
+}
+#hd h1 {
+	float:left;
+	display:inline;
+}
+#hd #user {
+	float:right;
+}
+div.clear {
+	clear:both;
+}

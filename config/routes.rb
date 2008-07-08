@@ -1,4 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :customers
+
+
+  MootoolsOnRails.routes
+
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
   map.login '/login', :controller => 'sessions', :action => 'new'
   map.register '/register', :controller => 'users', :action => 'create'
@@ -8,6 +13,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :session
 
   map.resources :invoices
+  map.resources :products
+  map.resources :customers,:collection => {:autocomplete => :post}
+  map.resources :categories
   
   # The priority is based upon order of creation: first created -> highest priority.
 

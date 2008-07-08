@@ -1,28 +1,41 @@
-  <%= yui_grids_stylesheet_link_tags %>  
-  <% yui_page :width => YUIPages::PAGE_750, :secondary => YUIPages::RIGHT_180 do %>
-    <% header do %>
-      <p>Page title</p>
-    <% end %>
-  
-    <% body do %>
-      <% main do %>
-        <% grid :columns => YUIPages::GRID_75_25 do %>
-          <% unit do %>
-            Content for the 75% width first column.
-          <% end %>
-          <% unit do %>
-            Content for the 25% width second column.
-          <% end %>
-        <% end %>
-      <% end %>
-    
-      <% secondary do %>
-        <p>Content for the 180px right sidebar.</p>
-      <% end %>      
-    <% end %>
-  
-    <% footer do %>
-      <p>Footer links here</p>
-    <% end %>
-  <% end %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+   <title>PLOP</title>
+   <%= javascript_include_tag 'mootools-1.2-core','observer','autocompleter' %>
+ 	 <%= stylesheet_link_tag  'yui/reset-fonts-grids.css','plop.css','autocompleter.css' %>   
+</head>
+<body>
+<div id="doc3" class="yui-t7">
+   <div id="hd"><h1>PLOP</h1>
+     <ul id="user">
+       <% if logged_in? %>
+         <li><%= link_to "Logout", login_path %></li>
+       <% else %>
+         <li><%= link_to "Login", login_path %></li>
+       <% end %>
+     </ul>
+     <div class="clear">
+      
+     </div>
+   </div>
+   <div id="bd">
+	<div id="nav" class="yui-g">
+    <ul id="menu">
+      <li><%= link_to "New Invoice", new_invoice_path %></li>
+      <li><%= link_to "Customers", customers_path %></li>
+      <li><%= link_to "Products", products_path %></li>
+      <li><%= link_to "Categories", categories_path %></li>
+      <li><%= link_to "Invoices",invoices_path %></li>
+    </ul>
+	</div>
+<div class="yui-g">
+  <%= yield %>
+	</div>
+
+	</div>
+   <div id="ft">Enjoy</div>
+</div>
 </body>
+</html>
