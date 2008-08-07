@@ -19,8 +19,17 @@ Autocompleter.Base = new Class({
 		markQuery: true,
 		width: 'inherit',
 		maxChoices: 10,
-		injectChoice: null,
+		injectChoice: function(choice){
+			var el = new Element('li')
+			.set('html',this.markQueryValue(choice[0]))
+			.adopt(new Element('span', {'class': 'additional_info'}).set('html',this.markQueryValue(choice[1])));
+			el.inputValue = choice[0];
+			el.inputKey = choice[1];
+			this.addChoiceEvents(el).inject(this.choices);
+		},
+		
 		customChoices: null,
+		
 		className: 'autocompleter-choices',
 		zIndex: 42,
 		delay: 400,
@@ -29,7 +38,8 @@ Autocompleter.Base = new Class({
 		onOver: $empty,
 		onSelect: $empty,
 		onSelection: $empty,
-		onShow: $empty,
+		onShow: function(){ this.hidden.value = '';
+		},
 		onHide: $empty,
 		onBlur: $empty,
 		onFocus: $empty,
@@ -52,12 +62,16 @@ Autocompleter.Base = new Class({
 		allowDupes: false,
 
 		cache: true,
-		relative: false
+		relative: false,
+		
+		hiddenName: '',
+		hidden: null
 	},
 
 	initialize: function(element, options) {
 		this.element = $(element);
 		this.setOptions(options);
+		
 		this.build();
 		this.observer = new Observer(this.element, this.prefetch.bind(this), $merge({
 			'delay': this.options.delay
@@ -80,6 +94,11 @@ Autocompleter.Base = new Class({
 		if ($(this.options.customChoices)) {
 			this.choices = this.options.customChoices;
 		} else {
+			this.hidden  = new Element('input', {
+				'name' : this.options.hiddenName,
+				'type' : 'hidden',
+				'value' : ''
+			}).inject(this.element,'after');
 			this.choices = new Element('ul', {
 				'class': this.options.className,
 				'styles': {
@@ -167,6 +186,7 @@ Autocompleter.Base = new Class({
 			}
 		}
 		this.observer.setValue(value);
+		this.hidden.value = this.selected.inputKey;
 		this.opted = value;
 		if (finish || this.selectMode == 'pick') start = end;
 		this.element.selectRange(start, end);

@@ -29,6 +29,10 @@ ul.autocompleter-choices li
 	line-height:			1.5em;
 }
 
+ul.autocompleter-choices li span.additional_info {
+	display:none;
+}
+
 ul.autocompleter-choices li.autocompleter-selected
 {
 	background-color:		#444;

@@ -31,9 +31,6 @@ class LabelShowBuilder < ActionView::Helpers::FormBuilder
             @template.content_tag(:p, label(method) + @template.image_tag(current_object.send(method).url),:class=>"show") 
        end
      end
-     #def text_area(method, options = {})
-     #  @template.content_tag(:p, label(method) + "<div class='wiki'>" + to_html(self.object[method]) + "</div>" ,:class=>"show")
-     #end
 
   # parse and return data as HTML
   def to_html(rawtext)
