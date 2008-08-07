@@ -71,7 +71,6 @@ Autocompleter.Base = new Class({
 	initialize: function(element, options) {
 		this.element = $(element);
 		this.setOptions(options);
-		
 		this.build();
 		this.observer = new Observer(this.element, this.prefetch.bind(this), $merge({
 			'delay': this.options.delay
