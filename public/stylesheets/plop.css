@@ -15,3 +15,6 @@
 div.clear {
 	clear:both;
 }
+table td {
+	padding: 0.2em;
+}

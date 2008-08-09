@@ -1,19 +1,6 @@
 <h1>Listing invoices</h1>
 
-<table>
-  <tr>
-  </tr>
-
-<% for invoice in @invoices %>
-  <tr>
-    <td><%= invoice.id %></td>
-    <td><%= invoice.customer.name %></td>
-    <td><%= link_to 'Show', invoice %></td>
-    <td><%= link_to 'Edit', edit_invoice_path(invoice) %></td>
-    <td><%= link_to 'Destroy', invoice, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+<%= table_for(:invoices, ["id",Proc.new{|x| x.customer.name},Proc.new{|x| sprintf("%2d",x.total)}]) %>
 
 <br />
 
