@@ -1,6 +1,6 @@
 <h1>Listing invoices</h1>
 
-<%= table_for(:invoices, ["id",Proc.new{|x| x.customer.name},Proc.new{|x| sprintf("%2d",x.total)}]) %>
+<%= table_for(:invoices, ["id",Proc.new{|x| x.customer.name},Proc.new{|x| sprintf("%2d",x.total)}],:headers=>true) %>
 
 <br />
 

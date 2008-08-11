@@ -1,0 +1,29 @@
+<!-- t.string   "name"
+t.string   "factory_code"
+t.string   "short_code"
+t.text     "description"
+t.integer  "stock"
+t.integer  "min_stock"
+t.decimal  "buy_price",    :precision => 8, :scale => 2
+t.datetime "created_at"
+t.datetime "updated_at" -->
+<fieldset>
+<legend>Product</legend>
+<fieldset>
+<legend>Code</legend>
+<%= f.text_field(:factory_code,:size=>"10") %>
+<%= f.text_field(:short_code,:size=>"10") %>
+</fieldset>
+<fieldset>
+<legend>Description</legend>
+<%= f.text_field(:name,:size=>"30") %>
+<%= f.text_area(:description,:size=>"30x4") %>
+</fieldset>
+<fieldset>
+<legend>Stock</legend>
+<%= f.text_field(:stock,:size=>"10") %>
+<%= f.text_field(:min_stock,:size=>"10") %>
+</fieldset>
+<%= f.text_field(:buy_price,:size=>"10") %>
+
+</fieldset>

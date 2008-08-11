@@ -1,0 +1,72 @@
+--- !ruby/object:Gem::Specification 
+name: rails_basic_helpers
+version: !ruby/object:Gem::Version 
+  version: 0.0.3
+platform: ruby
+authors: 
+- Damian Janowski
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2008-06-25 00:00:00 -03:00
+default_executable: 
+dependencies: []
+
+description: ""
+email: damian.janowski@gmail.com
+executables: []
+
+extensions: []
+
+extra_rdoc_files: 
+- README
+files: 
+- lib/basic_helpers.rb
+- lib/rails_basic_helpers.rb
+- README
+- doc/classes/BasicHelpers.html
+- doc/classes/BasicHelpers.src
+- doc/classes/BasicHelpers.src/M000001.html
+- doc/classes/BasicHelpers.src/M000002.html
+- doc/created.rid
+- doc/files/lib/basic_helpers_rb.html
+- doc/fr_class_index.html
+- doc/fr_file_index.html
+- doc/fr_method_index.html
+- doc/index.html
+- doc/rdoc-style.css
+has_rdoc: true
+homepage: 
+post_install_message: 
+rdoc_options: 
+- --line-numbers
+- --inline-source
+- --title
+- rails_basic_helpers
+- --main
+- README
+require_paths: 
+- bin
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      version: "0"
+  version: 
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      version: "0"
+  version: 
+requirements: []
+
+rubyforge_project: 
+rubygems_version: 1.2.0
+signing_key: 
+specification_version: 2
+summary: rails_basic_helpers
+test_files: []
+

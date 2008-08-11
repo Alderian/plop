@@ -1,0 +1,7 @@
+<h1>Listing products</h1>
+
+<%= table_for(:products, ["short_code","factory_code","name","stock","min_stock"],:headers=>true) %>
+
+<br />
+
+<%= link_to 'New product', new_product_path %>

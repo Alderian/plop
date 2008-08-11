@@ -1,3 +1,8 @@
+#nav {
+  background-color: #000;
+  color:#fff;
+}
+
 #nav ul {
 	
 }
@@ -5,6 +10,15 @@
 	float:left;
 	padding:5px;
 }
+#nav li a,#nav li a:visited {
+  color:#fff;
+  text-decoration:none;
+}
+#nav li a:hover {
+  color:#fc0;
+}
+
+
 #hd h1 {
 	float:left;
 	display:inline;
@@ -15,6 +29,52 @@
 div.clear {
 	clear:both;
 }
+h1 {
+  font-size:1.2em;
+  border-bottom:1px dotted #eee;
+  padding-top:10px;
+  margin-bottom:10px;
+}
+
+table {
+	border-bottom: 1px solid #333;
+  
+}
 table td {
 	padding: 0.2em;
+}
+table tr th {
+	background-color:#ccc;
+  font-weight:bold;
+	padding: 0.2em;
+	border-bottom: 1px solid #333;
+}
+form fieldset {
+  width:500px;
+  border:3px #ccc solid;
+  margin: 10px 0px 20px 0px;
+  padding: 10px 0px 10px 0px;
+}
+form fieldset fieldset{
+  padding: 20px 0px 40px 0px;
+  width:90%;
+  background: none;
+  border-top:1px #ccc dotted;
+  border-bottom: none;
+  border-left:none;
+  border-right:none;
+}
+
+form fieldset legend {
+  padding-left:5px;
+  padding-right:5px;
+}
+form label {
+  text-align:right;
+  float:left;
+  width:150px;
+  padding-right:5px;
+  padding-top:2px;
+}
+form input[type="text"] {
 }

@@ -7,7 +7,7 @@ class CreateProducts < ActiveRecord::Migration
       t.text :description
       t.integer :stock
       t.integer :min_stock
-      t.decimal :buy_price, :precision => 8, :scale => 2
+      t.integer :buy_price_in_cents,:default =>0
       t.timestamps
     end
   end
