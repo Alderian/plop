@@ -1,0 +1,3 @@
+[submodule "vendor/plugins/mootools_on_rails"]
+	path = vendor/plugins/mootools_on_rails
+	url = git://github.com/peterpunk/mootools-on-rails.git

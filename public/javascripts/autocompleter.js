@@ -57,7 +57,7 @@ Autocompleter.Base = new Class({
 
     /* addded lazy attribute to hold hidden ids */
 		hiddenName: '',
-		hidden: null
+		hidden: ''
 	},
 
 	initialize: function(element, options) {
@@ -82,15 +82,32 @@ Autocompleter.Base = new Class({
 	 * Builds the html structure for choices and appends the events to the element.
 	 * Override this function to modify the html generation.
 	 */
-	build: function() {
-		if ($(this.options.customChoices)) {
-			this.choices = this.options.customChoices;
-		} else {
-			this.hidden  = new Element('input', {
-				'name' : this.options.hiddenName,
-				'type' : 'hidden',
-				'value' : ''
-			}).inject(this.element,'after');
+  build: function() {
+    if ($(this.options.customChoices)) {
+      this.choices = this.options.customChoices;
+    } else {
+      if (this.options.multiple) {
+        this.hidden_multiple  = new Element('select', {
+          'name' : this.options.hiddenName,
+          'multiple' : 'multiple',
+          'value' : ''
+        })
+        this.hidden_multiple.adopt(new Element('options')).inject(this.element,'after');
+        this.hidden_multiple.setStyle('display', 'none');
+        var multiple = this.hidden_multiple;
+        if (this.options.hidden.trim()!= "") {
+          this.options.hidden.split(",").each(function(el) {
+            var option = new Element('option',{'value':el,'selected':'selected'})
+            option.inject(multiple);
+          });
+        }
+		  } else {
+  			this.hidden  = new Element('input', {
+  				'name' : this.options.hiddenName,
+  				'type' : 'hidden',
+  				'value' : ''
+  			}).inject(this.element,'after');
+		  }
 			this.choices = new Element('ul', {
 				'class': this.options.className,
 				'styles': {
@@ -176,9 +193,8 @@ Autocompleter.Base = new Class({
         var space = /[^\s,]+/;
         var tokens = value.split(this.options.separatorSplit).filter(space.test, space);
         var ids = [];
-        if (this.hidden.value.trim()!="")
-          var ids=this.hidden.value.split(sep);
-        ids.push(this.selected.inputKey);
+        var option = new Element('option',{'value':this.selected.inputKey,'selected':'selected'})
+        option.inject(this.hidden_multiple);
         if (!this.options.allowDupes) {
           tokens = [].combine(tokens);
           ids = [].combine(ids);
@@ -186,7 +202,6 @@ Autocompleter.Base = new Class({
         value = tokens.join(sep) + sep;
         this.elements.push(this.selected.inputValue);
         end = value.length;
-        this.hidden.value = ids.join(sep);
       }
     } else {
       this.hidden.value = this.selected.inputKey;
@@ -262,15 +277,20 @@ Autocompleter.Base = new Class({
 
       var sep = this.options.separator;
       index -= toIndex[last].length;
-      var key_values = this.hidden.value.trim().split(sep);
       /* hack to maintain ids */
       var new_elements = [];
-      var new_values = [];
+      var old_values =[];
+      var new_values =[];
       var elements = this.elements;
+
+      this.hidden_multiple.getSelected().each(function(el) {
+        old_values.push(el.value);
+        el.dispose();
+      });
       elements.each(function(el,i) {
         if (values.contains(el)) {
           new_elements.push(el);
-          new_values.push(key_values[i]);
+          new_values.push(old_values[i]);
         }
       }, elements);
       if (!this.options.allowDupes) {
@@ -279,7 +299,11 @@ Autocompleter.Base = new Class({
       } else {
         this.elements = combine.new_elements;
       }
-      this.hidden.value = new_values.join(sep);
+      var hidden = this.hidden_multiple
+      new_values.each(function(el,i) {
+        var option = new Element('option',{'value':el,'selected':'selected'});
+        option.inject(hidden);
+      });
       query = values[last];
     }
     if (query.length < this.options.minLength) {
