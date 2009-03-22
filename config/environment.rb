@@ -63,6 +63,7 @@ Rails::Initializer.run do |config|
   # config.active_record.schema_format = :sql
   config.gem "rails_basic_helpers"
   config.gem "money"
+  config.gem "authlogic"
 
   # Activate observers that should always be running
   # config.active_record.observers = :cacher, :garbage_collector
