@@ -19,7 +19,15 @@ Autocompleter.Base = new Class({
 		markQuery: true,
 		width: 'inherit',
 		maxChoices: 10,
-		injectChoice: null,
+		injectChoice: function(choice){
+			var el = new Element('li')
+			.set('html',this.markQueryValue(choice[0]))
+			.adopt(new Element('span', {'class': 'additional_info'}).set('html',this.markQueryValue(choice[1])));
+			el.inputValue = choice[0];
+			el.inputKey = choice[1];
+			this.addChoiceEvents(el).inject(this.choices);
+		},
+		
 		customChoices: null,
 		
 		className: 'autocompleter-choices',
@@ -30,7 +38,8 @@ Autocompleter.Base = new Class({
 		onOver: $empty,
 		onSelect: $empty,
 		onSelection: $empty,
-		onShow: $empty,
+		onShow: function(){ this.hidden.value = '';
+		},
 		onHide: $empty,
 		onBlur: $empty,
 		onFocus: $empty,
@@ -54,15 +63,13 @@ Autocompleter.Base = new Class({
 
 		cache: true,
 		relative: false,
-
-    /* addded lazy attribute to hold hidden ids */
+		
 		hiddenName: '',
 		hidden: null
 	},
 
 	initialize: function(element, options) {
 		this.element = $(element);
-    this.elements = [];
 		this.setOptions(options);
 		this.build();
 		this.observer = new Observer(this.element, this.prefetch.bind(this), $merge({
@@ -131,10 +138,7 @@ Autocompleter.Base = new Class({
 	},
 
 	onCommand: function(e) {
-		if (!e && this.focussed) {
-      
-		  return this.prefetch();
-	  }
+		if (!e && this.focussed) return this.prefetch();
 		if (e && e.key && !e.shift) {
 			switch (e.key) {
 				case 'enter':
@@ -167,35 +171,25 @@ Autocompleter.Base = new Class({
 		if (this.options.multiple) {
 			var split = this.options.separatorSplit;
 			value = this.element.value;
-			end += this.queryIndex;
 			start += this.queryIndex;
+			end += this.queryIndex;
 			var old = value.substr(this.queryIndex).split(split, 1)[0];
-      value = value.substr(0, this.queryIndex) + input + value.substr(this.queryIndex + old.length);
-      var sep = this.options.separator;
-      if (finish) {
-        var space = /[^\s,]+/;
-        var tokens = value.split(this.options.separatorSplit).filter(space.test, space);
-        var ids = [];
-        if (this.hidden.value.trim()!="")
-          var ids=this.hidden.value.split(sep);
-        ids.push(this.selected.inputKey);
-        if (!this.options.allowDupes) {
-          tokens = [].combine(tokens);
-          ids = [].combine(ids);
-        }
-        value = tokens.join(sep) + sep;
-        this.elements.push(this.selected.inputValue);
-        end = value.length;
-        this.hidden.value = ids.join(sep);
-      }
-    } else {
-      this.hidden.value = this.selected.inputKey;
-    }
-    this.observer.setValue(value);
-    this.opted = value;
-    if (finish || this.selectMode == 'pick') start = end;
-    this.element.selectRange(start, end);
-    this.fireEvent('onSelection', [this.element, this.selected, value, input]);
+			value = value.substr(0, this.queryIndex) + input + value.substr(this.queryIndex + old.length);
+			if (finish) {
+				var space = /[^\s,]+/;
+				var tokens = value.split(this.options.separatorSplit).filter(space.test, space);
+				if (!this.options.allowDupes) tokens = [].combine(tokens);
+				var sep = this.options.separator;
+				value = tokens.join(sep) + sep;
+				end = value.length;
+			}
+		}
+		this.observer.setValue(value);
+		this.hidden.value = this.selected.inputKey;
+		this.opted = value;
+		if (finish || this.selectMode == 'pick') start = end;
+		this.element.selectRange(start, end);
+		this.fireEvent('onSelection', [this.element, this.selected, value, input]);
 	},
 
 	showChoices: function() {
@@ -252,50 +246,30 @@ Autocompleter.Base = new Class({
 	},
 
 	prefetch: function() {
-    var value = this.element.value, query = value;
-    if (this.options.multiple) {
-      var split = this.options.separatorSplit;
-      var values = value.split(split);
-      var index = this.element.getCaretPosition();
-      var toIndex = value.substr(0, index).split(split);
-      var last = toIndex.length - 1;
-
-      var sep = this.options.separator;
-      index -= toIndex[last].length;
-      var key_values = this.hidden.value.trim().split(sep);
-      /* hack to maintain ids */
-      var new_elements = [];
-      var new_values = [];
-      var elements = this.elements;
-      elements.each(function(el,i) {
-        if (values.contains(el)) {
-          new_elements.push(el);
-          new_values.push(key_values[i]);
-        }
-      }, elements);
-      if (!this.options.allowDupes) {
-        this.elements = [].combine(new_elements);
-        new_values = [].combine(new_values);
-      } else {
-        this.elements = combine.new_elements;
-      }
-      this.hidden.value = new_values.join(sep);
-      query = values[last];
-    }
-    if (query.length < this.options.minLength) {
-      this.hideChoices();
-    } else {
-      if (query === this.queryValue || (this.visible && query == this.selectedValue)) {
-        if (this.visible) return false;
-        this.showChoices();
-      } else {
-        this.queryValue = query;
-        this.queryIndex = index;
-        if (!this.fetchCached()) this.query();
-      }
-    }
-    return true;
-  },
+		var value = this.element.value, query = value;
+		if (this.options.multiple) {
+			var split = this.options.separatorSplit;
+			var values = value.split(split);
+			var index = this.element.getCaretPosition();
+			var toIndex = value.substr(0, index).split(split);
+			var last = toIndex.length - 1;
+			index -= toIndex[last].length;
+			query = values[last];
+		}
+		if (query.length < this.options.minLength) {
+			this.hideChoices();
+		} else {
+			if (query === this.queryValue || (this.visible && query == this.selectedValue)) {
+				if (this.visible) return false;
+				this.showChoices();
+			} else {
+				this.queryValue = query;
+				this.queryIndex = index;
+				if (!this.fetchCached()) this.query();
+			}
+		}
+		return true;
+	},
 
 	fetchCached: function() {
 		return false;

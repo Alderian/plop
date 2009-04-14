@@ -1,21 +1,2 @@
-<!-- t.string   "name"
-t.text     "address"
-t.datetime "last_activity"
-t.date     "registration"
-t.boolean  "active"
-t.string   "email"
-t.string   "phone"
-t.string   "source"
-t.datetime "created_at"
-t.datetime "updated_at" -->
-
-<fieldset>
-  <legend>Customer</legend>
-<%= f.text_field :name,:size=>30 %>
-<%= f.text_area :address,:size=>"30x4" %>
-<%= f.text_field :phone,:size=>30 %>
-<%= f.text_field :email,:size=>30 %>
-<%= f.text_field :source,:size=>30 %>
-</fieldset>
-
+<%= f.text_field :name %>
 
