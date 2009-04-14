@@ -3,6 +3,11 @@ class SessionsController < ApplicationController
   # Be sure to include AuthenticationSystem in Application Controller instead
   include AuthenticatedSystem
 
+  def form
+  end
+  def mirar
+  end
+
   # render new.rhtml
   def new
   end

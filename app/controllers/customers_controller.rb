@@ -1,5 +1,6 @@
 class CustomersController < ResourceController::Base
   layout 'application'
+  before_filter :require_user
   #protect_from_forgery :except => :autocomplete
   #def autocomplete
   #  @customers = Customer.find(:all,:conditions => ["name LIKE ?", "%#{params[:value]}%"])
