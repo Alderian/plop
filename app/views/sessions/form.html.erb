@@ -1,0 +1,8 @@
+<% form_tag(mirar_session_path) do %>
+<%= text_field_tag "casa[nada][]",""%>
+<%= text_field_tag "casa",""%>
+<%= hidden_field_tag "pelado","1,2,3,4,5,6"%>
+<%= hidden_field_tag "sinco","[1,2,3,4,5,6]"%>
+<%= hidden_field_tag "conco","['1','2','3','4','5','6']"%>
+<%= submit_tag %>
+<% end %>

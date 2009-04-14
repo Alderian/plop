@@ -1,6 +1,7 @@
 class LabelFormBuilder < ActionView::Helpers::FormBuilder
      helpers = field_helpers + 
                %w(date_select datetime_select time_select) + 
+               %w(autocomplete_multiple_with_associated_field) + 
                %w(collection_select select country_select time_zone_select) - 
                %w(hidden_field label fields_for) 
 
